@@ -1,0 +1,356 @@
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas,
+caption, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset,
+figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup,
+html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav,
+object, ol, p, pre, q, samp, section, small, span, strong, sub, summary,
+sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, canvas, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+a, ins, del {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+caption, th {
+  text-align: left;
+}
+
+q:after, q:before {
+  content: "";
+}
+
+strong {
+	font-weight: bold;
+}
+
+.right {
+	float: right;
+}
+
+html {
+	background-color: #D3E6F4;
+	font: 62.5%/1 "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
+
+section#content {
+	width: 64em;
+	height: 36em;
+	background-color: #fff;
+	-moz-border-image: url(images/border.png) 6 6 6 6 stretch stretch;
+	-webkit-border-image: url(images/border.png) 6 6 6 6 stretch stretch;
+	border: 6px solid #333;
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	margin-top: -18em;
+	left: 50%;
+	margin-left: -32em;
+	overflow: hidden;
+}
+
+/*
+-----------------------------------
+fonts
+-----------------------------------
+*/
+
+@font-face {
+	font-family: Aller;
+	src: url('fonts/Aller_Rg.ttf');
+}
+
+@font-face {
+	font-family: Aller;
+	font-weight: bold;
+	src: url('fonts/AllerDisplay.ttf');
+}
+
+@font-face {
+	font-family: Blackout;
+	src: url('fonts/Blackout-2am.ttf');
+}
+
+@font-face {
+	font-family: "Aller Light";
+	src: url('fonts/Aller_Lt.ttf');
+}
+
+@font-face {
+	font-family: "Colaborate Thin";
+	src: url('fonts/ColabThi.otf');
+}
+
+/*
+-----------------------------------
+start screen
+-----------------------------------
+*/
+.start_bg {
+	text-align: center;
+	line-height: 36em;
+	color: rgba(255,255,255, 0.9);
+	position: relative;
+}
+
+.filler {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.start_bg h1 {
+	font-size: 30em;
+}
+
+/*
+-----------------------------------
+"front trends" text
+-----------------------------------
+*/
+
+.inner_title {
+	
+}
+
+.front {
+	font-size: 18em;
+	letter-spacing: -.1em;
+	top: -40em;
+	text-transform: uppercase;
+	position: relative;
+	font-family: Aller;
+	text-align: left;
+	color: rgba(0,0,0,0.8);
+	text-align: center;
+}
+
+.trends {
+	font-size: 14em;
+	letter-spacing: -.03em;
+	top: 40em;
+	text-transform: uppercase;
+	position: relative;
+	font-family: Blackout;
+	font-weight: bold;
+	text-align: left;
+	color: #F6102A;
+	padding-left: 0em;
+	text-align: center;
+}
+
+.conference {
+	font-size: 4em;
+	text-transform: uppercase;
+	position: relative;
+	letter-spacing: 0.8em;
+	font-family: Aller;
+	color: rgba(0,0,0,0.2);
+	top: 20em;
+	text-align: center;
+	padding-left: 1em;
+}
+
+/*
+--------------------------------------
+animations
+--------------------------------------
+*/
+@-webkit-keyframes scale_to_zero {
+	0% {
+		-webkit-transform: scale(1,1);	
+	}
+	100% {
+		-webkit-transform: scale(0,0);
+	}
+}
+
+.scale_title {
+	-webkit-animation-name: scale_to_zero;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+.rotate_text {
+	-webkit-transition: all 0.4s linear;
+	-webkit-transform:rotate(90deg) translate(0.2em, -0.6em);
+	-webkit-transform-origin: 0 0;
+	color: rgba(0,0,0,0.2);
+	letter-spacing: 3px;
+}
+
+/*
+--------------------------------------
+where 
+--------------------------------------
+*/
+
+.inner_where {
+	padding: 4em;
+	position: relative;
+}
+
+.where {
+	font-family: "Aller";
+	font-size: 6em;
+	text-transform: uppercase;
+	position: absolute;
+	left: 15em;
+	z-index: 10;
+}
+
+.warsaw {
+	font-family: "Aller";
+	font-size: 10em;
+	font-weight: bold;
+	position: absolute;
+	left: 10em;
+	z-index: 5;
+	padding: 0.3em 1em 0.2em 0;
+	margin-top: -0.3em;
+}
+
+.warsaw.bg_white {
+	background-color: #fff;
+}
+
+.poland {
+	font-family: "Aller";
+	font-size: 14em;
+	font-weight: bold;
+	position: absolute;
+	z-index: 4;
+	color: #F6102A;
+}
+
+.clearer {
+	position: absolute;
+	z-index: 9;
+	width: 10em;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+}
+
+/*
+--------------------------------------
+when 
+--------------------------------------
+*/
+
+.inner-when {
+	position: relative;
+	top: -80em;
+	width: 100%;
+	height: 100%;
+}
+
+.date-day {
+	position: relative;
+	margin: 0 auto;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 1.0s linear;
+	-webkit-transform-origin: 50% 50%;
+	height: 12em;
+}
+
+.day.back {
+	display: none;
+}
+
+.day, .copy {
+	background-color: #F6102A;
+	-webkit-border-radius: 0.5em;
+	font-size: 6em;
+	padding: 0.25em;
+	color: #fff;
+	font-family: "Aller";
+	font-weight: bold;
+	position: absolute;
+	left: 50%;
+	top: 0.5em;
+	margin-left: -0.8em;
+	-webkit-backface-visibility: hidden;
+}
+
+.day.back {
+	display: block;
+	-webkit-transform: rotateY(180deg);
+}
+
+.rotated {
+	-webkit-transform: rotateY(180deg);
+}
+
+.copy {
+	-webkit-backface-visibility: visible;
+}
+
+.month {
+	font-family: "Aller";
+	font-weight: bold;
+	font-size: 6em;
+	color: #000;
+	position: relative;
+	text-align: center;
+}
+
+.slogan-inner {
+	text-align: center;
+	padding-top: 4em;
+}
+
+.slogan {
+	font-family: "Aller";
+	font-size: 2em;
+	color: #000;
+	position: relative;
+	top: 10em;
+}
+
+.s_javascript {
+	color: #F6102A;
+}
+
+.slogan a {
+	display: inline-block;
+	text-align: center;
+	padding-top: 1em;
+	color: #F6102A;
+}
+
+footer {
+	position: absolute;
+	top: 33em;
+	left: 2em;
+}
+
+span.right {
+	font-size: 1.2em;
+	padding-left: 1em;
+}
+
+	span.right a {
+		color: rgba(0,0,0,0.8);
+	}
